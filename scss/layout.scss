@@ -5,10 +5,11 @@ $gap: 15px;
 // $colWidth: 100% / $col;
 
 $primaryColor: #000000;
-$secondaryColor: #efefef;
+$bgColor: #efefef;
 $ApolloColor: #e0e0e0;
 $socialColor: #909090;
 $white: #ffffff;
+$beforAfterPadding: 37px;
 
 $btnColor: $primaryColor;
 
@@ -20,8 +21,9 @@ $btnColor: $primaryColor;
 .container{
     max-width: $container;
     width: 100%;
-    padding: 0 $gap;
+    // padding: 0 $gap;
     margin: 0 auto;
+    height: 100%;
 
 }
 
@@ -40,11 +42,11 @@ $btnColor: $primaryColor;
 }
 
 
-@for $i from 1 through $col {
-    .ba-col-#{$i}{
-        width: $colWidth*$i;
-    }
-  }
+// @for $i from 1 through $col {
+//     .ba-col-#{$i}{
+//         width: $colWidth*$i;
+//     }
+//   }
 
 //mixins
 // @mixin buttonHover{
