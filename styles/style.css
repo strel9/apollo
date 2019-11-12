@@ -153,3 +153,39 @@ body {
   width: 80px;
   padding-right: 37px;
   position: absolute; }
+
+.ba-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px; }
+
+.ba-form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .ba-form-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+    .ba-form-inputs input {
+      width: 48%;
+      border: solid #000000 1px;
+      background-color: transparent;
+      padding: 12px 20px; }
+  .ba-form textarea {
+    width: 100%;
+    border: solid #000000 1px;
+    background-color: transparent;
+    padding: 12px 20px;
+    margin-bottom: 20px; }
+  .ba-form__btn {
+    width: 100%;
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #ffffff;
+    background-color: #000000;
+    font-weight: 700; }
