@@ -36,22 +36,87 @@ body {
     right: 60px;
     top: 38px; }
 
-.top {
-  display: flex; }
-  .top__text {
-    margin-right: 20px; }
-  .top-menu-btn {
+.ba-menu-btn {
+  display: inline-flex; }
+  .ba-menu-btn__text {
+    margin-right: 10px; }
+  .ba-menu-btn-block {
     color: #000000;
     height: 15px;
     width: 30px;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between; }
-    .top-menu-btn__line {
+    .ba-menu-btn-block__line {
       display: block;
       width: 100%;
       height: 1px;
       background-color: #60606e; }
+
+.ba-menu-btn:hover {
+  transform: scale(1.2); }
+
+.ba-menu-block {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: #b0b0b0;
+  transform: translateY(0);
+  transition: 0.4s;
+  z-index: 5; }
+
+/* Выпадащее меню */
+#menuOpen:checked ~ .ba-menu-block {
+  transform: translateY(100%); }
+
+.ba-menu {
+  display: flex;
+  /* justify-content: space-between; */
+  list-style: none; }
+
+.ba-menu__link {
+  font-size: 1.5em;
+  color: #fff;
+  padding: 0 1em; }
+
+/* Animation menu */
+.ba-menu__item {
+  opacity: 0;
+  transform: translateY(-1.25em) scale(1.25);
+  transition: transform .5s ease, opacity .2s; }
+
+#menuOpen:checked ~ .ba-menu-block .ba-menu__item {
+  transform: none;
+  opacity: 1; }
+
+#menuOpen:checked ~ .ba-menu-block .ba-menu__item:first-child {
+  transition-delay: .75s; }
+
+#menuOpen:checked ~ .ba-menu-block .ba-menu__item:nth-child(2) {
+  transition-delay: .85s; }
+
+#menuOpen:checked ~ .ba-menu-block .ba-menu__item:nth-child(3) {
+  transition-delay: .95s; }
+
+#menuOpen:checked ~ .ba-menu-block .ba-menu__item:nth-child(4) {
+  transition-delay: 1.05s; }
+
+#menuOpen:checked ~ .ba-menu-block .ba-menu__item:nth-child(5) {
+  transition-delay: 1.15s; }
+
+.visually-hidden {
+  position: absolute;
+  left: -9999999px;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; }
 
 .ba-letter {
   display: block;
@@ -74,14 +139,6 @@ body {
     width: 50%;
     max-width: 500px;
     position: relative; }
-    .block-text::after {
-      display: block;
-      content: "";
-      background-color: #000000;
-      height: 80px;
-      width: 1px;
-      padding-top: 37px;
-      position: absolute; }
     .block-text__title {
       font-size: 50px;
       font-weight: 100; }
@@ -126,6 +183,9 @@ body {
 .header--text {
   padding-top: 240px;
   margin-left: 175px; }
+
+.--ut {
+  margin-left: 180px; }
 
 .--сenter {
   justify-content: center; }

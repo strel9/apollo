@@ -27,19 +27,45 @@
     <header class="ba-header ba-section">
         <!-- <div class="container"> -->
         <div class="ba-header-wrapper">
-            <div class="top">
-                <span class="top__text">MENU</span>
-                <div class="top-menu-btn">
-                    <span class="top-menu-btn__line"></span>
-                    <span class="top-menu-btn__line"></span>
-                    <span class="top-menu-btn__line"></span>
-                </div>
+            <!-- <div class="ba">
+                <span class="ba__text">MENU</span>
+                <label class="ba-menu-btn">
+                    <span class="ba-menu-btn__line"></span>
+                    <span class="ba-menu-btn__line"></span>
+                    <span class="ba-menu-btn__line"></span>
+                </label>
+            </div> -->
+
+            <!-- --- -->
+            <!-- <div class="ba"> -->
+                <label for="menuOpen" class="ba-menu-btn" aria-label="open-menu">
+                    <div class="ba-menu-btn__text">MENU</div>
+                    <div class="ba-menu-btn-block">
+                        <span class="ba-menu-btn-block__line"></span>
+                        <span class="ba-menu-btn-block__line"></span>
+                        <span class="ba-menu-btn-block__line"></span>
+                    </div>
+                </label>
             </div>
-        </div>
+            <input type="checkbox" id="menuOpen" class="visually-hidden">
+
+            <div class="ba-menu-block">
+                <nav>
+                    <ul class="ba-menu">
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">menu 01</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">menu 02</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">menu 03</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">menu 04</a></li>
+                        <li class="ba-menu__item"><a href="" class="ba-menu__link">menu 05</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        <!-- </div> -->
 
         <img class="ba-letter" src="./img/letA.png" alt="a">
 
-        <div class="block-text header--text">
+        <div class="block-text header--text block-text--after">
             <h1 class="block-text__title">
                 <span>Apollo</span> PSD Template
             </h1>
@@ -141,7 +167,7 @@
             <img class="ba-letter" src="./img/letL.png" alt="L">
             <div class="block">
                 <!-- <div class="block-left"> -->
-                <div class="block-text block-text--after::after">
+                <div class="block-text block-text--after --ut">
                     <h1 class="block-text__title">
                         <span>Ut enim</span> ad minim
                     </h1>
