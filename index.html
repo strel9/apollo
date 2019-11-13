@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Apollo</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/app.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700&display=swap" rel="stylesheet">
+    <!-- jQuery 1.8 or later, 33 KB -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Fotorama from CDNJS, 19 KB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Apollo</title>
+
     <link rel="icon" href="favicon.ico">
 
 </head>
@@ -97,10 +105,31 @@
             <!-- <div class="container"> -->
             <img class="ba-letter" src="./img/letO.png" alt="o">
 
-            <div class="block">
-                <!-- <img class="block__img-bg" src="./img/sec3.jpg" alt=""> -->
-                <img class="control-left" src="./img/arrow-left.png" alt="">
-                <img class="control-right" src="./img/arrow-right.png" alt="">
+            <div class="block --сenter">
+                <div class="fotorama" id="fotorama" data-arrows="true" data-click="true" data-swipe="true">
+
+                    <!-- 
+                    <script type="text/javascript">
+                        $(function () {
+                            //   $('#fotorama').fotorama();
+                            $('#fotorama').fotorama({
+                                arrowPrev: '<img src="./img/arrow-left.png" width="30" height="30" >',
+                                arrowNext: '<img src="./img/arrow-right.png" width="30" height="30" >'
+
+                            }
+                            );
+                        });
+                    </script> -->
+                    <img class="block__img-bg" src="./img/sec3.jpg" alt="">
+                    <img class="block__img-bg" src="./img/sec3.jpg" alt="">
+                    <img class="block__img-bg" src="./img/sec3.jpg" alt="">
+                    <img class="block__img-bg" src="./img/sec3.jpg" alt="">
+                    <img class="block__img-bg" src="./img/sec3.jpg" alt="">
+
+                </div>
+                <!-- <i class="fas fa-chevron-left"></i> -->
+                <!-- <img class="control-left" src="./img/arrow-left.png" alt=""> -->
+                <!-- <img class="control-right" src="./img/arrow-right.png" alt=""> -->
             </div>
             <!-- </div> -->
         </section>
@@ -112,7 +141,7 @@
             <img class="ba-letter" src="./img/letL.png" alt="L">
             <div class="block">
                 <!-- <div class="block-left"> -->
-                <div class="block-text">
+                <div class="block-text block-text--after::after">
                     <h1 class="block-text__title">
                         <span>Ut enim</span> ad minim
                     </h1>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box; }
 
@@ -57,7 +58,8 @@ body {
   height: 100%;
   position: absolute;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  z-index: 101; }
 
 .ba-letter:first-child,
 .ba-letter:last-child {
@@ -75,7 +77,7 @@ body {
     .block-text::after {
       display: block;
       content: "";
-      color: #000000;
+      background-color: #000000;
       height: 80px;
       width: 1px;
       padding-top: 37px;
@@ -121,34 +123,26 @@ body {
   .ba-social__items:nth-child(2) {
     background-color: #000000; }
 
-.control-left {
-  padding: 20px 30px;
-  width: 75px;
-  height: 75px;
-  background-color: #ffffff;
-  color: #000000;
-  position: absolute;
-  left: 20px;
-  top: 47%; }
-
-.control-right {
-  padding: 20px 30px;
-  width: 75px;
-  height: 75px;
-  background-color: #ffffff;
-  color: #000000;
-  position: absolute;
-  right: 20px;
-  top: 47%; }
-
 .header--text {
   padding-top: 240px;
   margin-left: 175px; }
 
+.--сenter {
+  justify-content: center; }
+
+.block-text--after::after {
+  display: block;
+  content: "";
+  background-color: #000000;
+  height: 80px;
+  width: 1px;
+  padding-top: 37px;
+  position: absolute; }
+
 .block-text__title--before::before {
   display: block;
   content: "";
-  color: #000000;
+  background-color: #000000;
   height: 1px;
   width: 80px;
   padding-right: 37px;
@@ -189,3 +183,39 @@ body {
     color: #ffffff;
     background-color: #000000;
     font-weight: 700; }
+
+.control-left, .control-right {
+  padding: 20px 30px;
+  width: 75px;
+  height: 75px;
+  background-color: #ffffff;
+  color: #000000;
+  position: absolute;
+  top: 47%; }
+
+.control-left {
+  left: 20px; }
+
+.control-right {
+  right: 20px; }
+
+.fotorama__arr--next::before, .fotorama__arr--prev::before {
+  padding: 30px 30px;
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translateY(-45%);
+  font-family: fontawesome;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.fotorama__arr--next::before {
+  content: '\f105';
+  right: 10px; }
+
+.fotorama__arr--prev::before {
+  content: '\f104';
+  left: 10px; }

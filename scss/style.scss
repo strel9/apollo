@@ -1,11 +1,5 @@
 @import "layout.scss";
 
-// @font-face {
-//   font-weight: normal;
-//   font-display: swap; /*как будет отображаться текст пока не загружег шрифт*/
-//   font-style: normal;
-// }
-
 body {
   color: $primaryColor;
   background-color: $white;
@@ -14,20 +8,14 @@ body {
 }
 
 .ba-header {
-  // padding-top: 38px;
   display: flex;
-  // justify-content: flex-end;
   background: url(../img/sec1bg.jpg);
   background-size: auto 100%;
   background-repeat: no-repeat;
 
 
   &-wrapper {
-    // margin-right: 60px;
-    // width: 100%;
     display: flex;
-    // justify-content: flex-end;
-    // align-items: center;
     position: absolute;
     right: 60px;
     top: 38px;
@@ -64,6 +52,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: 101;
 }
 
 .ba-letter:first-child,
@@ -85,7 +74,7 @@ body {
     &::after {
       display: block;
       content: "";
-      color: $primaryColor;
+      background-color: $primaryColor;
       height: 80px;
       width: 1px;
       padding-top: $beforAfterPadding;
@@ -161,39 +150,31 @@ body {
   }
 }
 
-.control-left {
-  padding: 20px 30px;
-  width: 75px;
-  height: 75px;
-  background-color: $white;
-  color: $primaryColor;
-  position: absolute;
-  left: 20px;
-  top: 47%;
-}
 
-.control-right {
-  padding: 20px 30px;
-  width: 75px;
-  height: 75px;
-  background-color: $white;
-  color: $primaryColor;
-  position: absolute;
-  right: 20px;
-  top: 47%;
-}
 
 .header--text {
   padding-top: 240px;
   margin-left: 175px;
 }
 
+.--сenter{
+  justify-content: center;
+}
 
+.block-text--after::after {
+  display: block;
+  content: "";
+  background-color: $primaryColor;
+  height: 80px;
+  width: 1px;
+  padding-top: $beforAfterPadding;
+  position: absolute;
+}
 
 .block-text__title--before::before {
   display: block;
   content: "";
-  color: $primaryColor;
+  background-color: $primaryColor;
   height: 1px;
   width: 80px;
   padding-right: $beforAfterPadding;
@@ -253,3 +234,78 @@ body {
     font-weight: 700;
   }
 }
+
+.control {
+
+  &-left,
+  &-right {
+    padding: 20px 30px;
+    width: 75px;
+    height: 75px;
+    background-color: $white;
+    color: $primaryColor;
+    position: absolute;
+    top: 47%;
+  }
+
+  &-left {
+    left: 20px;
+  }
+
+  &-right {
+    right: 20px;
+  }
+}
+
+// .control-left {
+//   padding: 20px 30px;
+//   width: 75px;
+//   height: 75px;
+//   background-color: $white;
+//   color: $primaryColor;
+//   position: absolute;
+//   left: 20px;
+//   top: 47%;
+// }
+
+// .control-right {
+//   padding: 20px 30px;
+//   width: 75px;
+//   height: 75px;
+//   background-color: $white;
+//   color: $primaryColor;
+//   position: absolute;
+//   right: 20px;
+//   top: 47%;
+// }
+
+.fotorama__arr- {
+
+  &-next::before,
+  &-prev::before {
+    padding: 30px 30px;
+    width: 45px;
+    height: 45px;
+    background-color: $white;
+    // color: $primaryColor;
+    position: absolute;
+    // top: 46%;
+    transform: translateY(-45%);
+    font-family: fontawesome;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-next::before{
+    content: '\f105';
+    right: 10px;
+
+  }
+  &-prev::before{
+    content: '\f104';
+    left: 10px;
+
+  }
+}
+
