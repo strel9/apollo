@@ -256,7 +256,7 @@ body {
   display: block;
   content: "";
   background-color: $primaryColor;
-  height: 80px;
+  height: 60px;
   width: 1px;
   padding-top: $beforAfterPadding;
   position: absolute;
@@ -267,7 +267,7 @@ body {
   content: "";
   background-color: $primaryColor;
   height: 1px;
-  width: 80px;
+  width: 60px;
   padding-right: $beforAfterPadding;
   position: absolute;
 }
